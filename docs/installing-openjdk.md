@@ -23,7 +23,16 @@ I'm installing this from https://jdk.java.net/22/
 
 ![Windows install is by zip file](windows-installer-is-by-zip-file.png)
 
-What I did was download [openjdk-22.0.2_windows-x64_bin.zip](https://download.java.net/java/GA/jdk22.0.2/c9ecb94cd31b495da20a27d4581645e8/9/GPL/openjdk-22.0.2_windows-x64_bin.zip). I extracted the zip to find the folder `jdk-22.0.2`. I moved the folder into `C:\Program Files\Java` then I updated the system variables `$env:PATH` for the existing `C:\Program Files\Java\jdk-1.8.0_211\bin` to `C:\Program Files\Java\jdk-22.0.2\bin`. Then I restarted my computer. Only after that did I get the java version I wanted when I ran `java -version`.
+What I did was download [openjdk-22.0.2_windows-x64_bin.zip](https://download.java.net/java/GA/jdk22.0.2/c9ecb94cd31b495da20a27d4581645e8/9/GPL/openjdk-22.0.2_windows-x64_bin.zip). I checked the hash of the downloaded file against the [sha256 hash](https://download.java.net/java/GA/jdk22.0.2/c9ecb94cd31b495da20a27d4581645e8/9/GPL/openjdk-22.0.2_windows-x64_bin.zip.sha256 (the sha256 value is f2a9b9ab944e71a64637fcdc6b13a1188cf02d4eb9ecf71dc927e98b3e45f5dc)).
+
+```cmd
+certutil -hashfile .\openjdk-22.0.2_windows-x64_bin.zip sha256
+```
+The hash values match.
+
+![Checking the sha256 hash for the downloaded openjdk-22.0.2_windows-x64_bin.zip](openjdk-22.0.2-sha256-hash.png)
+
+After this check, I extracted the zip to find the folder `jdk-22.0.2`. I moved the folder into `C:\Program Files\Java` then I updated the system variables `$env:PATH` for the existing `C:\Program Files\Java\jdk-1.8.0_211\bin` to `C:\Program Files\Java\jdk-22.0.2\bin`. Then I restarted my computer. Only after that did I get the java version I wanted when I ran `java -version`.
 
 ![Update jdk to 22](update-java-to-22.0.2.png).
 
