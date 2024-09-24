@@ -309,4 +309,17 @@ The pom includes drivers for chrome, edge, firefox, internet explorer and firefo
 
 So when did I ask for https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.42.1/opentelemetry-sdk-extension-autoconfigure-1.42.1.pom? I didn't. I suspect one of the artifacts had reference to it. So by transitivity, my project pulls it in. [Transitive dependencies](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#transitive-dependencies) seem to be at play here. For a fuller overview of how dependencies are managed, see [Introduction to the Dependency Mechanism](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html). It's sufficient for now to note that everything needed to use selenium (i.e. the [bill of materials](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)) is now included.
 
-## Use Selenium in a unit test
+## Add Extension Pack for Java
+
+VS Code suggested I add [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) so I did. 
+
+I now have Java Projects and Maven sections in my explorer.
+
+Java Projects shows me what's in my Java Project
+![Java Projects](java-extension-pack-java-projects.png).
+What's notable is how it didn't need to move from project root to the fakeapitests directory in order to find pom.xml. I think that's useful.
+
+Maven shows me all the maven specific things like lifecycle, plugins and dependencies.
+![Maven](java-extension-pack-maven.png)
+
+At this time I've not used anything.
