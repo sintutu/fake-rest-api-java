@@ -1,4 +1,4 @@
-[# Is there a `mvn` template for junit 5 and selenium?
+# Is there a `mvn` template for junit 5 and selenium?
 
 I want to use the `mvn` cli to generate a template that contains at least junit. I ant to learn how to add selenium as a project dependency. At this point I don't know how to use `mvn`. I'm doing things the hard way without IntelliJ so I can see what's happening under the hood.
 

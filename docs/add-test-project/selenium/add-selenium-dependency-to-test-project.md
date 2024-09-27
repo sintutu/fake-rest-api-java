@@ -1,4 +1,4 @@
-# Add Selenium
+# Add Selenium Dependency
 
 ## Adding Selenium via the documentation
 
@@ -323,3 +323,4 @@ Maven shows me all the maven specific things like lifecycle, plugins and depende
 ![Maven](java-extension-pack-maven.png)
 
 At this time I've not used anything.
+
